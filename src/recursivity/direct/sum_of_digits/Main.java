@@ -1,4 +1,4 @@
-package recursivity.direct;
+package recursivity.direct.sum_of_digits;
 
 import recursivity.ExecutionTime;
 
@@ -7,7 +7,7 @@ import recursivity.ExecutionTime;
  * and the main method tests and prints the results with execution times.
  */
 
-public class SumMethods {
+public class Main {
 
     private static long sumRecursive(int n) {
         if (n <= 9)
