@@ -1,4 +1,4 @@
-package recursivity.sum_of_integers;
+package recursivity.direct.sum_of_integers;
 
 /**
  * This is a recursive function that calculates the sum of the first n integers.

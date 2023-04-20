@@ -1,4 +1,6 @@
-package recursivity.fibonacci;
+package recursivity.direct.fibonacci;
+
+import recursivity.ExecutionTime;
 
 /**
  * These are two functions, one implemented recursively and the other iteratively,
@@ -9,14 +11,14 @@ public class Main {
 
     public static void main(String[] args) {
         int n = 6;
-        executionTime(() -> {
+        ExecutionTime.print(() -> {
             long result = fibonacciRecursive(n);
             System.out.println("Result (recursive): " + result);
-        }, n);
-        executionTime(() -> {
+        });
+        ExecutionTime.print(() -> {
             long result = fibonacciIterative(n);
             System.out.println("Result (iterative): " + result);
-        }, n);
+        });
 
     }
 
@@ -44,12 +46,4 @@ public class Main {
         return (fibsup);
     }
 
-    private static void executionTime(Runnable func, int n) {
-        long startTime = System.nanoTime();
-        func.run();
-        long endTime = System.nanoTime();
-        long timeElapsed = endTime - startTime;
-        System.out.println("Execution time in nanoseconds: " + timeElapsed);
-        System.out.println("Execution time in milliseconds: " + (timeElapsed / 1000000));
-    }
 }
